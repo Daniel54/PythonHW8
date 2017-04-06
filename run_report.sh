@@ -6,7 +6,7 @@
 
 usage(){
 	echo "Invalid options"
-	echo "Usage ./$0 -s <> -c <> -w<>"
+	echo "Usage ./$0 -f <BegDate> -t <EndDate> -e<Email> -u <User> -p<Pass>"
 	exit 1
 }
 
@@ -17,17 +17,23 @@ then
 	usage
 fi
 
+#Make a funciton that that uses BegDate and EndDate 
+#passes it to python script
 
 
 #looping for flags/ options -s -w -c
-while getopts ":s:w:c:" opt #once it finds it, it is stored in opt
+while getopts ":f:t:e:u:p:" opt #once it finds it, it is stored in opt
 do 
 	case $opt in 
-		s) size=$OPTARG 
-        		;;
-		w) width=$OPTARG
+		f) BegDate=$OPTARG 
+        	;;
+		t) EndDate=$OPTARG
 			;;
-		c) color=$OPTARG
+		e) email=$OPTARG
+			;;
+		u) user=$OPTARG
+			;;
+		p) passwd=$OPTARG
 			;;
 		\?)#anything else is invalid option
 			usage
