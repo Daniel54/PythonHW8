@@ -6,34 +6,42 @@
 #This code relies on having sendmail installed. 
 #sudo apt-get install sendmail
 
-./test.py #This needs to be changed to './create_report.py <args>' 
-ExitCode=$?	#grabs the exit code of the last run script
-Header="Error"
-Body="Error"
+./create_report $BegDate $EndDate
+EXITCODE=$?	#grabs the exit code of the last run script
+HEADER="Error"
+BODY="Error"
 
-if [ $ExitCode = 0 ]
+if [ $EXITCODE = 0 ]
 	then
 	zip report *.dat
 	
-	#Need to add in code to FTP the zip file to a server
+	#Need to finish the code to FTP the zip file to a server
+	#HOST=
+	#ftp -inv $HOST << EOF
+	#user $user $passwd
+	#cd /	#where do we actually put the file?
+	#put report.zip
+	#bye
+	#EOF
 
-	Header="Succesfully transfer file (FTP Address)" 
+
+	HEADER="Succesfully transfer file (FTP Address)" 
 	#don't forget to make it actually put the server name in
 
-	Body="Succesfully created a transaction report from (BegDate) to (EndDate)"
-	#don't forget to make it actually put in the beg/end
+	BODY="Succesfully created a transaction report from $BegDate to $EndDate"
+	
 
 
-elif [ $ExitCode = 255 ] #A returned -1 is seen as 255
+elif [ $EXITCODE = 255 ] #A returned -1 is seen as 255
 	then
-	Header="The create_report program exit with code -1"
-	Body="Bad input parameters (BegDate) (EndDate)"
+	HEADER="The create_report program exit with code -1"
+	BODY="Bad input parameters $BegDate ($EndDate"
 	#don't forget to make it acutally put in the beg/end date
 
-elif [ $ExitCode = 254 ] #A returned -2 is seen as 254
+elif [ $EXITCODE = 254 ] #A returned -2 is seen as 254
 	then
-	Header="The create_report program exit with code -2"
-	Body="No transactions available from (BegDate) to (EndDate)"
+	HEADER="The create_report program exit with code -2"
+	BODY="No transactions available from $BegDate to $EndDate"
 	#don't forget to make it acutally put in the beg/end date
 
 else
@@ -41,10 +49,12 @@ else
 fi
 
 touch email.txt
-echo "Subject: $Header" >> email.txt
-echo "$Body" >> email.txt
+echo "Subject: $HEADER" >> email.txt
+echo "$BODY" >> email.txt
 
+echo "Sending email, please wait..."
 sendmail chrislangan@mail.weber.edu < ./email.txt #Used my email for testing purposes. Replace it
 rm email.txt
+echo "Email sent"
 
 exit 0
