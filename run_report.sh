@@ -40,8 +40,8 @@ do
 
 done
 
-echo "Testing: [$BegDate] [$EndDate] [$email] [$user] [$passwd]"
-./test.py >> test4.dat #running py script
+#echo "Testing: [$BegDate] [$EndDate] [$email] [$user] [$passwd]"
+./create_report.py $BegDate $EndDate
 ################ENTER vm ip in var host####################################
 code=$?              #Capturing exit code from create_report.py
 host="137.190.19.97" #Capturing host variable will need to change.
