@@ -53,7 +53,7 @@ def create(beg_date,end_date):
                 if i[3] != None:
                     wString += '{:02}'.format(int(i[3]))
                 else:
-                    wString += '      00'
+                    wString += '00'
                 if i[4] != None:
                     wString += '{:07.2f}'.format(i[4]).replace(".","")
                 else:
