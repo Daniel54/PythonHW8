@@ -60,6 +60,9 @@ then
     # zip portion
 	fileName=`find . -name '*.dat'` #getting file name
 	zipCall=`zip -v $outFile $fileName`
+    head="Succesfully transfered file"
+    body="Successfully created a transaction report from $BegDate to
+    $EndDate where $BegDate and $EndDate are those entered by the user"
 
 	#Checking zip
 	if [[ $? -eq 1 ]]
@@ -97,10 +100,17 @@ END_SCRIPT
 	fi
 elif [[ $code == 254 ]] #exit(-2)
 then
-	echo "Empty transaction: Send email"
+    head="The create_report program exit with code -2"
+    body="No transaction available from $BegDate to $EndDate where 
+    $BegDate and $EndDate are those entered by the user."
+	echo "$head $body"
+	
 elif [[ $code == 255 ]] #exit(-1)
-then 
-	echo "Invalid input parameters."
+then
+    head="The create_report program exit with code -1"
+    body="Bad input parameters $BegDate $EndDate where $BegDate and 
+    $EndDate are those entered by the user"
+	echo "$head $body"
 
 fi
 
