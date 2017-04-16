@@ -2,21 +2,17 @@
 
 """
 Creates the the output and prints it on the screen,
-It can be redirected with the > operator to write it
-to a file
 """
-
 import sys
 import sqlite3
-
 
 
 def create(beg_date,end_date):
     """
     Creates the output using the begin and end dates as the range
     Args:
-        beg_date
-        end_date
+        beg_date => the date to start searching from
+        end_date => the date to stop searching at
     Return:
         None
     """
@@ -98,17 +94,10 @@ def create(beg_date,end_date):
                 f.write(wString+'\n')
         f.close()
 
-
-
         if len(theData) == 0:
             exit(-2)
-
     else:
         exit(-1)
-
-
-
-
 
 
 def validate(date_input):
@@ -131,7 +120,6 @@ def validate(date_input):
     return False
 
 
-
 def help():
     """
     Guide on how to use this script
@@ -139,7 +127,6 @@ def help():
     print("Help:")
     print("./create_report <BEGINDATE> <ENDDATE>")
     print("both dates must be 8 digits long, and within valid range")
-
 
 
 def main():
@@ -153,11 +140,9 @@ def main():
         help()
 
 
-
 if __name__== "__main__":
     main()
     exit(0)
 
 
 #exit(0)
-

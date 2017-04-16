@@ -6,7 +6,7 @@
 #This code relies on having sendmail installed. 
 #sudo apt-get install sendmail
 
-./create_report $BegDate $EndDate
+./create_report.py $1 $2
 EXITCODE=$?	#grabs the exit code of the last run script
 HEADER="Error"
 BODY="Error"
@@ -28,27 +28,27 @@ if [ $EXITCODE = 0 ]
 	HEADER="Succesfully transfer file (FTP Address)" 
 	#don't forget to make it actually put the server name in
 
-	BODY="Succesfully created a transaction report from $BegDate to $EndDate"
+	BODY="Succesfully created a transaction report from $1 to $2"
 	
 
 
 elif [ $EXITCODE = 255 ] #A returned -1 is seen as 255
 	then
 	HEADER="The create_report program exit with code -1"
-	BODY="Bad input parameters $BegDate ($EndDate"
+	BODY="Bad input parameters $1 $2"
 	#don't forget to make it acutally put in the beg/end date
 
 elif [ $EXITCODE = 254 ] #A returned -2 is seen as 254
 	then
 	HEADER="The create_report program exit with code -2"
-	BODY="No transactions available from $BegDate to $EndDate"
+	BODY="No transactions available from $1 to $2"
 	#don't forget to make it acutally put in the beg/end date
 
 else
 	echo "Check the exit codes of create_report.py"
 fi
 
-touch email.txt
+
 echo "Subject: $HEADER" >> email.txt
 echo "$BODY" >> email.txt
 

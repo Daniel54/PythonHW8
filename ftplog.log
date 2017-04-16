@@ -1,0 +1,10 @@
+Connected to 137.190.19.86.
+220 Welcome to Gisela's FTP service.
+331 Please specify the password.
+230 Login successful.
+local: ./hw8Out.zip remote: ./hw8Out.zip
+200 PORT command successful. Consider using PASV.
+150 Ok to send data.
+226 Transfer complete.
+740 bytes sent in 0.00 secs (18.0954 MB/s)
+221 Goodbye.

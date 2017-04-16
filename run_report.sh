@@ -44,12 +44,10 @@ done
 ./create_report.py $BegDate $EndDate
 ################ENTER vm ip in var host####################################
 code=$?              #Capturing exit code from create_report.py
-host="137.190.19.97" #Capturing host variable will need to change.
+host=`hostname -I` #Capturing host variable will need to change.
 curDir=$PWD			 #Captur present working dir
 log=./ftplog.log     #ftp log file to check
 outFile="hw8Out"     #creating out file var
-
-
 
 
 
@@ -63,6 +61,7 @@ then
     head="Succesfully transfered file"
     body="Successfully created a transaction report from $BegDate to
     $EndDate where $BegDate and $EndDate are those entered by the user"
+	echo $body | mail -s "$head" $email
 
 	#Checking zip
 	if [[ $? -eq 1 ]]
@@ -103,15 +102,14 @@ then
     head="The create_report program exit with code -2"
     body="No transaction available from $BegDate to $EndDate where 
     $BegDate and $EndDate are those entered by the user."
-	echo "$head $body"
+	echo $body | mail -s "$head" $email
 	
 elif [[ $code == 255 ]] #exit(-1)
 then
     head="The create_report program exit with code -1"
-    body="Bad input parameters $BegDate $EndDate where $BegDate and 
-    $EndDate are those entered by the user"
+    body="Bad input parameters $BegDate $EndDate where $BegDate and $EndDate are those entered by the user"
 	echo "$head $body"
-
+	echo $body | mail -s "$head" $email
 fi
 
 exit 0
