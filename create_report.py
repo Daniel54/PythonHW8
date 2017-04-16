@@ -137,7 +137,7 @@ def main():
     if len(sys.argv) == 3:
         create(sys.argv[1],sys.argv[2])
     else:
-        help()
+        exit(-1)
 
 
 if __name__== "__main__":

@@ -23,15 +23,15 @@ fi
 while getopts ":f:t:e:u:p:" opt #once it finds it, it is stored in opt
 do 
 	case $opt in 
-		f) BegDate=$OPTARG 
+		f)BegDate=$OPTARG 
         	;;
-		t) EndDate=$OPTARG
+		t)EndDate=$OPTARG
 			;;
-		e) email=$OPTARG
+		e)email=$OPTARG
 			;;
-		u) user=$OPTARG
+		u)user=$OPTARG
 			;;
-		p) passwd=$OPTARG
+		p)passwd=$OPTARG
 			;;
 		\?)#anything else is invalid option
 			usage
@@ -44,7 +44,7 @@ done
 ./create_report.py $BegDate $EndDate
 ################ENTER vm ip in var host####################################
 code=$?              #Capturing exit code from create_report.py
-host=`hostname -I` #Capturing host variable will need to change.
+host='137.190.19.86' #Capturing host variable will need to change.
 curDir=$PWD			 #Captur present working dir
 log=./ftplog.log     #ftp log file to check
 outFile="hw8Out"     #creating out file var
