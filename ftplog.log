@@ -6,5 +6,5 @@ local: ./hw8Out.zip remote: ./hw8Out.zip
 200 PORT command successful. Consider using PASV.
 150 Ok to send data.
 226 Transfer complete.
-740 bytes sent in 0.00 secs (18.0954 MB/s)
+380 bytes sent in 0.00 secs (9.2922 MB/s)
 221 Goodbye.

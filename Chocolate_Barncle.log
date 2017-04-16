@@ -1,0 +1,125 @@
+commit 9c54634b8c614342558569e8e509d7ee59c07b15
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sun Apr 16 02:46:56 2017 +0000
+
+    README.md added some comments
+
+commit 38b959efceb80f829f47dd23a640059a549f997a
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sun Apr 16 02:28:57 2017 +0000
+
+    Needs review
+
+commit 40b6ae393cfc0013125f98d9eec1ab299d670b5d
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sun Apr 16 01:24:10 2017 +0000
+
+    Review
+
+commit 2bdff3b2f31dba681438ca5a8b22ebada936227b
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Sat Apr 15 13:10:49 2017 -0600
+
+    Added in email test reuqired for email
+
+commit 38f6b1f0e230cd31e45ead6751793037b7227946
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Sat Apr 15 11:55:11 2017 -0600
+
+    Adding in create_report.py call
+
+commit a8db2b701f5516fb488bab75efba88f18115c89a
+Merge: 8c80ca9 ebc2c72
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Sat Apr 15 11:46:05 2017 -0600
+
+    Merge pull request #2 from Daniel54/daniel
+    
+    Daniel
+
+commit ebc2c727131e2fba938111fbd707725efdcad44c
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Sat Apr 15 11:44:47 2017 -0600
+
+    Changed Readme file
+
+commit 8c80ca97f8dceb96cb9145a953292c40838faeea
+Merge: 43c52c7 8753ba2
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sat Apr 15 09:03:48 2017 -0600
+
+    Merge pull request #1 from Daniel54/Nasser
+    
+    Nasser
+
+commit 8753ba296190c913029ae0f503a6f1279e25f971
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sat Apr 15 08:48:34 2017 -0600
+
+    Completed create_report.py
+
+commit b19fac2039d5c80f7464d97b073fce90f1fb2d6f
+Author: NasserDos <nasserbinshabeeb@mail.weber.edu>
+Date:   Sat Apr 15 08:44:48 2017 -0600
+
+    Completed create_report.py
+
+commit 43c52c72fa2f95b84b5f6a774b03fe8a6c559a3f
+Author: Chris Langna <chris.langan195@gmail.com>
+Date:   Fri Apr 14 16:21:21 2017 -0600
+
+    Starting work on FTP code
+
+commit a75ebdba45b2ae565c93c090202765aefd8eac6a
+Author: Chris Langna <chris.langan195@gmail.com>
+Date:   Fri Apr 14 16:04:12 2017 -0600
+
+    email portion of code working
+
+commit 88f485715f7cba221e6b4db51fdb7ec3fd398ee3
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Fri Apr 14 15:41:12 2017 -0600
+
+    Addint testing python file
+
+commit 4b085bf101cdc880f12b05dc1b38b4e253f8f5c2
+Author: Chris Langna <chris.langan195@gmail.com>
+Date:   Fri Apr 14 15:35:23 2017 -0600
+
+    email code updated
+
+commit e24dabd335baf56c580f7bdfc1fb7125891c1d24
+Author: Chris Langna <chris.langan195@gmail.com>
+Date:   Fri Apr 14 15:09:27 2017 -0600
+
+    email.sh created to start work on the email portion of the script
+
+commit d490abd903be9bf6595d4006e73131c72bb2b2d6
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Fri Apr 14 15:03:03 2017 -0600
+
+    Added in zip portion, fixed FTP functionality
+
+commit 4119a0cf9ec5acc891fdb551b6a4949b60218773
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Thu Apr 6 10:54:54 2017 -0600
+
+    Added in input parameters
+
+commit 76fa1f794710b5d5aa37778ae7cc8b63d6989ce0
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Thu Apr 6 10:45:56 2017 -0600
+
+    Added python file (create_report)
+
+commit faea6e79804c0350da03e7d43d494562be476f17
+Author: Daniel Lavulo <daniellavulo@mail.weber.edu>
+Date:   Thu Apr 6 10:43:37 2017 -0600
+
+    Commit run_report with get ops
+
+commit dcb4b386527c45f9ee89dfeaa491f138564660c1
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Mon Apr 3 19:45:59 2017 -0600
+
+    Initial commit
